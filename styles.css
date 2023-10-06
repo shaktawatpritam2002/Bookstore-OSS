@@ -1,0 +1,146 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+
+/* Header styles for the homepage */
+.homepage-header {
+    background-color: #333; /* Background color for the header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Logo styles */
+.logo img {
+    max-width: 100px; /* Adjust the maximum logo width */
+    height: auto;
+}
+
+/* Navigation styles */
+.homepage-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.homepage-nav li {
+    margin-right: 20px; /* Adjust the spacing between navigation elements */
+}
+
+.homepage-nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px; /* Adjust the font size of navigation elements */
+}
+
+/* Homepage section with background image */
+.homepage-section {
+    background-image: url('background.jpg'); /* Replace 'background.jpg' with your image file */
+    background-size: cover;
+    background-position: center;
+    height: 400px; /* Adjust the height of the homepage section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+}
+
+
+
+main {
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+
+
+/* Style for the book carousel container */
+.book-carousel-container {
+    position: relative;
+    width: 80%; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the carousel */
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Style for the book carousel */
+.book-carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Style for individual book containers */
+.book-container {
+    flex: 0 0 25%; /* Display four books per slide; adjust as needed */
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Align content vertically */
+}
+
+/* Style for the currently displayed book */
+.book-container.active {
+    flex: 0 0 30%; /* Adjust the active book size */
+}
+
+/* Style for book images */
+.book-container img {
+    width: 100%; /* Fixed width for book cover images */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; /* Adjust the maximum height as needed */
+}
+
+/* Style for book titles */
+.book-container h3 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* Style for book descriptions and prices */
+.book-container p {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Arrows for navigation */
+.carousel-arrows {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.prev-arrow,
+.next-arrow {
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+}
+
+.prev-arrow:hover,
+.next-arrow:hover {
+    background-color: #555;
+}
