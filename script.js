@@ -62,3 +62,20 @@ $(document).ready(function() {
     });
 });
 
+window.onscroll = () =>{
+    if(window.scrollY>80){
+        document.querySelector('.navbar').classList.add('active');
+    }
+    else{
+        document.querySelector('.navbar').classList.remove('active');
+    }
+}
+
+window.onload = () =>{
+    if(window.scrollY>80){
+        document.querySelector('.navbar').classList.add('active');
+    }
+    else{
+        document.querySelector('.navbar').classList.remove('active');
+    }
+}
