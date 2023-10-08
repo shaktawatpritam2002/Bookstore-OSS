@@ -1,4 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@300&display=swap');
+
 *{
+    font-family: 'Lato', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,6 +14,24 @@
     transition: width none;
 }
 
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background-color: black;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -17,6 +39,18 @@ body {
     background-color: #f0f0f0;
 }
 
+/* Logo styles */
+
+.logo i{
+    color: maroon;
+    margin-right: 0.8rem;
+}
+.logo{
+    color: black;
+    font-weight: bolder;
+    font-size: 2rem;
+    margin-left: 2rem;
+}
 
 /* Header styles for the homepage */
 
@@ -56,12 +90,12 @@ body {
 }
 
 .header .header-1 .search-form label:hover{
-    color: #777;
+    color: maroon;
 }
 
 .header .header-1 .icons div,
 .header .header-1 .icons a{
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     margin-left: 1.5rem;
     color: black;
     cursor: pointer;
@@ -69,8 +103,20 @@ body {
 
 .header .header-1 .icons div:hover,
 .header .header-1 .icons a:hover{
-    color: #777;
+    color: maroon;
 }
+
+#search-btn{
+    display: none;
+}
+
+/* .header .header-2 .navbar a{
+    color: white;
+    background: rgb(100, 0, 0);
+    display: inline-block;
+    padding: 1.2rem;
+    font-size: 1.5rem;
+} */
 
 /* .homepage-header {
     background-color: #333; 
@@ -80,38 +126,52 @@ body {
     padding: 10px 20px;
 } */
 
-/* Logo styles */
-
-.logo i{
-    color: maroon;
-}
-.logo{
-    color: black;
-    font-weight: bolder;
-    font-size: 2rem;
-}
-
 /* Navigation styles */
-.homepage-nav ul {
+.navbar {
+    text-align: center;
+}
+
+.navbar ul {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 1.2rem;
+    font-size: 1.5rem;
     display: flex;
+    background-color: maroon;
+    text-align: center;
+    justify-items: center;
+    padding-left: 36%;
 }
 
-.homepage-nav li {
+.navbar li {
     margin-right: 20px;
 }
 
-.homepage-nav a {
+.navbar a {
     text-decoration: none;
     color: white;
-    font-size: 18px;
+    padding: 1.2rem;
+    font-size: 1.7rem;
+    /* display: inline-block; */
+}
+
+.navbar.active{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+}
+
+.navbar a:hover{
+    background: rgb(160, 0, 0);
+}
+
+body{
+    height: 300rem;
 }
 
 /* Homepage section with background image */
 .homepage-section {
-    background-image: url('background.jpg'); /* Replace 'background.jpg' with your image file */
+    background-image: url('background.jpg'); 
     background-size: cover;
     background-position: center;
     height: 400px;
@@ -126,12 +186,13 @@ body {
 
 
 main {
-    padding: 20px;
+    padding: 2rem;
+    font-size: 1.5rem;
 }
 
 footer {
     text-align: center;
-    background-color: #333;
+    background-color: maroon;
     color: white;
     padding: 10px;
 }
