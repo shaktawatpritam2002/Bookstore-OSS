@@ -32,6 +32,22 @@ html::-webkit-scrollbar-thumb{
     background-color: black;
 }
 
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.9rem 3rem;
+    border-radius: 0.5rem;
+    color: white;
+    background: rgb(150, 0, 0);
+    font-size: 1.7rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn:hover{
+    background: maroon;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -43,20 +59,20 @@ body {
 
 .logo i{
     color: maroon;
-    margin-right: 0.8rem;
+    /* margin-right: 0.8rem; */
 }
 .logo{
     color: black;
     font-weight: bolder;
-    font-size: 2rem;
-    margin-left: 2rem;
+    font-size: 2.2rem;
+    /* margin-left: 2rem; */
 }
 
 /* Header styles for the homepage */
 
 .header .header-1{
     background: white;
-    padding: 1.5rem;
+    padding: 1.5rem 8%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -74,8 +90,8 @@ body {
 }
 
 .header .header-1 .search-form input{
-    font-size: 1.4rem;
-    padding: 0 1.5rem;
+    font-size: 1.6rem;
+    padding: 0 1.2rem;
     width: 100%;
     height: 100%;
     text-transform: none;
@@ -83,7 +99,7 @@ body {
 }
 
 .header .header-1 .search-form label{
-    font-size: 2rem;
+    font-size: 2.5rem;
     padding-right: 1.5rem;
     color: black;
     cursor: pointer;
@@ -127,6 +143,7 @@ body {
 } */
 
 /* Navigation styles */
+
 .navbar {
     text-align: center;
 }
@@ -163,6 +180,95 @@ body {
 
 .navbar a:hover{
     background: rgb(160, 0, 0);
+}
+
+.login-form-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.95);
+    position: fixed;
+    top: 0;
+    right: -105%;
+    z-index: 10000;
+    height: 100%;
+    width: 100%;
+}
+.login-form-container.active{
+    right: 0;
+}
+
+.login-form-container form{
+    background: white;
+    border: 1px solid black;
+    width: 40rem;
+    padding: 2rem;
+    box-shadow: #777;
+    border-radius: 0.5rem;
+    margin: 2rem;
+}
+
+.login-form-container form h3{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: black;
+    text-align: center;
+}
+
+.login-form-container form span{
+    display: block;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+}
+
+.login-form-container form .box{
+    margin: 0.7rem 0;
+    font-size: 1.6rem;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    padding: 1rem 1.2rem;
+    color: black;
+    text-transform: none;
+}
+
+.login-form-container form .checkbox{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 0;
+}
+
+.login-form-container form .checkbox label{
+    font-size: 1.5rem;
+    color: gray;
+    cursor: pointer;
+}
+
+.login-form-container form .btn{
+    text-align: center;
+    width: 100%;
+    margin: 1.5rem 0;
+}
+
+.login-form-container form p{
+    padding-top: 0.8rem;
+    color: gray;
+    font-size: 1.5rem;
+}
+
+.login-form-container form p a{
+    color: maroon;
+    text-decoration: underline;
+}
+
+.login-form-container #close-login-btn{
+    position: absolute;
+    top: 1.5rem;
+    right: 2.5rem;
+    font-size: 5rem;
+    color: black;
+    cursor: pointer;
 }
 
 body{
@@ -273,4 +379,63 @@ footer {
 .prev-arrow:hover,
 .next-arrow:hover {
     background-color: #555;
+}
+
+
+/* media queries */
+
+@media (max-width:991px) {
+
+    html{
+        font-size: 55%;
+    }
+
+    .header .header-1{
+        padding: 2rem;
+    }
+}
+
+@media (max-width:768px) {
+
+    html{
+        scroll-padding-top: 0;
+    }
+
+    body{
+        padding-bottom: 6rem;
+    }
+
+    .header .header-2{
+        display: none;
+    }
+
+    #search-btn{
+        display: inline-block;
+    }
+
+    .header .header-1{
+        box-shadow: #777;
+        position: relative;
+    }
+
+    .header .header-1 .search-form{
+        position: absolute;
+        top: -115%;
+        right: 2rem;
+        width: 90%;
+        box-shadow: #777;
+    }
+
+    .header .header-1 .search-form.active{
+        top: 115%;
+    }
+}
+
+@media (max-width:450px) {
+    html{
+        font-size: 55%;
+    }
+    .header .header-1{
+        padding: 2rem;
+    }
 }
